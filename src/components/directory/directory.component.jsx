@@ -8,36 +8,36 @@ export default class Directory extends Component {
     this.state = {
       sections: [
         {
-          title: 'EARPHONES',
+          title: 'イヤホン',
           imageUrl:
-            'https://images.unsplash.com/photo-1564632516593-e1be25b7ee33?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3451&q=80',
+            'https://images.unsplash.com/photo-1536435316746-a0b5a1665819?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1052&q=80',
           id: 1,
-          linkUrl: 'shop/smartphones'
+          linkUrl: 'shop/earphones'
         },
         {
-          title: 'TABLETS',
+          title: 'タブレット',
           imageUrl:
             'https://images.unsplash.com/photo-1542751110-97427bbecf20?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2940&q=80',
           id: 2,
           linkUrl: 'shop/tablets'
         },
         {
-          title: 'BLUETOOTH SPEAKERS',
+          title: 'Bluetoothスピーカー',
           imageUrl:
-            'https://images.unsplash.com/photo-1518671678551-911467efe539?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3450&q=80',
+            'https://images.unsplash.com/photo-1542193810-9007c21cd37e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80',
           id: 3,
           linkUrl: 'shop/speakers'
         },
         {
-          title: 'SMARTPHONES',
+          title: 'スマートフォン',
           imageUrl:
-            'https://images.unsplash.com/photo-1514996550219-62672472d03b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3450&q=80',
+            'https://images.unsplash.com/photo-1512499617640-c74ae3a79d37?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=966&q=80',
           size: 'large',
           id: 4,
-          linkUrl: 'shop/earphones'
+          linkUrl: 'shop/smartphones'
         },
         {
-          title: 'LAPTOPS',
+          title: 'ノートパソコン',
           imageUrl:
             'https://images.unsplash.com/photo-1553532646-968536ab10e7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=3449&q=80',
           size: 'large',
