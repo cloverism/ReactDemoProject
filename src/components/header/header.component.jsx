@@ -1,10 +1,14 @@
 import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { compose } from 'redux';
 import { ReactComponent as Logo } from '../../assets/icons8-sun.svg';
 import { auth } from '../../firebase/firebase.utils';
+import CartIcon from '../cart-icon/cart-icon.component';
+import CartDropdown from '../cart-dropdown/cart-dropdown.component';
 import './header.styles.scss';
 
-const Header = ({ location, currentUser }) => {
+const Header = ({ location, currentUser, hidden }) => {
   return (
     <div className="header__container">
       <div className="header">
@@ -42,10 +46,24 @@ const Header = ({ location, currentUser }) => {
               SIGN IN
             </Link>
           )}
+          <CartIcon />
         </div>
+        {hidden ? null : <CartDropdown />}
       </div>
     </div>
   );
 };
 
-export default withRouter(Header);
+// the function to allow access to state in root-reducer
+// state -> state in root-reducer -> defined in user.reducer.js / cart.reducer.js etc...
+// set props (currentUser) as value in root-reducer
+const mapStateToProps = state => ({
+  currentUser: state.user.currentUser,
+  hidden: state.cart.hidden
+});
+
+// compose() -> Multiple HOC
+export default compose(
+  connect(mapStateToProps),
+  withRouter
+)(Header);

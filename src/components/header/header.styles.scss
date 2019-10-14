@@ -9,9 +9,11 @@
   max-width: 1366px;
   margin: 0 auto;
   padding: 10px 30px;
+  position: relative;
 
   .logo-container {
-    width: 70px;
+    width: 50px;
+    height: 64px;
   }
 
   .options {
@@ -47,6 +49,7 @@
 @media screen and (max-width: 575px) {
   .option {
     font-size: 14px;
+    padding: 10px 6px;
   }
 
   .header {
