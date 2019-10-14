@@ -1,0 +1,10 @@
+.shop-page {
+  padding: 40px 30px 20px 30px;
+}
+
+@media screen and (max-width: 575px) {
+  .shop-page {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}

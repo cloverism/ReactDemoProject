@@ -1,12 +1,10 @@
-.directory-menu {
-  width: 100%;
+.sign-in-and-sign-up {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
 }
 
 @media screen and (max-width: 575px) {
-  .directory-menu {
+  .sign-in-and-sign-up {
     display: block;
   }
 }

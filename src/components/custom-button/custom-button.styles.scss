@@ -1,0 +1,37 @@
+.custom-button {
+  min-width: 130px;
+  width: auto;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 25px;
+  font-size: 16px;
+  background-color: #57a99a;
+  color: white;
+  font-weight: 700;
+  border: 1px solid #57a99a;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+
+  &:hover {
+    background-color: white;
+    color: #57a99a;
+    border: 1px solid #57a99a;
+  }
+
+  &.google-signIn {
+    background-color: #4285f4;
+    border: 1px solid #4285f4;
+
+    &:hover {
+      border: 1px solid #4285f4;
+      color: #4285f4;
+      background-color: white;
+    }
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .custom-button {
+    padding: 0 15px;
+  }
+}

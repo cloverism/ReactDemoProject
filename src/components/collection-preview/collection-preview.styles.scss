@@ -1,0 +1,22 @@
+.collection-preview {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 40px 0;
+
+  .title {
+    font-size: 22px;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+
+  .preview {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .collection-preview .preview {
+    display: block;
+  }
+}

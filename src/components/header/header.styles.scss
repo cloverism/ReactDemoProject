@@ -1,0 +1,60 @@
+.header__container {
+  background-color: #57a99a;
+}
+
+.header {
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1366px;
+  margin: 0 auto;
+  padding: 10px 30px;
+
+  .logo-container {
+    width: 70px;
+  }
+
+  .options {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+
+.logo {
+  height: 50px;
+}
+
+.option {
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px 12px;
+  color: #fff;
+  text-align: center;
+  transition: all 0.5s ease-out;
+
+  &:hover {
+    background-color: #ecf4f3;
+    color: #000;
+  }
+}
+
+.option-active {
+  background-color: #ecf4f3;
+  color: #000;
+}
+
+@media screen and (max-width: 575px) {
+  .option {
+    font-size: 14px;
+  }
+
+  .header {
+    padding: 10px 15px;
+    height: 60px;
+  }
+
+  .logo {
+    height: 40px;
+  }
+}
