@@ -17,6 +17,7 @@ const CartDropdown = ({ cartItems }) => {
   );
 };
 
+// Get cart props from redux
 const mapStateToProps = state => ({
   cartItems: state.cart.cartItems
 });
