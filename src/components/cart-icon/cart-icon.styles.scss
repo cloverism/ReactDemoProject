@@ -21,18 +21,3 @@
     color: #fff;
   }
 }
-
-@media screen and (max-width: 575px) {
-  .cart-icon {
-    width: 36px;
-    height: 30px;
-    .shopping-icon {
-      width: 20px;
-      height: 20px;
-    }
-    .item-count {
-      font-size: 8px;
-      bottom: 5px;
-    }
-  }
-}

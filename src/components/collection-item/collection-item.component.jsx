@@ -11,7 +11,9 @@ const CollectionItem = ({ item, addItem }) => {
       <div className="image" style={{ backgroundImage: `url(${imageUrl})` }} />
       <div className="collection-footer">
         <p className="name">{name}</p>
-        <p className="price">¥ {price}</p>
+        <p className="price">
+          ¥ {price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
+        </p>
       </div>
       <CustomButton inverted onClick={() => addItem(item)}>
         カゴに入れる

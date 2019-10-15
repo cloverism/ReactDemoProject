@@ -79,9 +79,11 @@ class App extends React.Component {
 }
 
 // Get access to state.user.currentUser
-const mapStateToProps = state => ({
-  currentUser: state.user.currentUser
-});
+const mapStateToProps = state => {
+  return {
+    currentUser: state.user.currentUser
+  };
+};
 
 // Set user.actions "setCurrentUser" as this.props.setCurrentUser
 const mapDispatchToProps = dispatch => ({

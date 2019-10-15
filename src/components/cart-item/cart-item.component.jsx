@@ -8,7 +8,8 @@ const CartItem = ({ item }) => {
       <div className="item-details">
         <span className="name">{item.name}</span>
         <span className="price">
-          {item.quantity} × <b>¥{item.price}</b>
+          {item.quantity} ×{' '}
+          <b>¥{item.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}</b>
         </span>
       </div>
     </div>
