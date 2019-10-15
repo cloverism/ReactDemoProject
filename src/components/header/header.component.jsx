@@ -2,8 +2,11 @@ import React from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
+import { createStructuredSelector } from 'reselect';
 import { ReactComponent as Logo } from '../../assets/icons8-sun.svg';
 import { auth } from '../../firebase/firebase.utils';
+import { selectCartHidden } from '../../redux/cart/cart.selectors';
+import { selectCurrentUser } from '../../redux/user/user.selectors';
 import CartIcon from '../cart-icon/cart-icon.component';
 import CartDropdown from '../cart-dropdown/cart-dropdown.component';
 import './header.styles.scss';
@@ -56,10 +59,10 @@ const Header = ({ location, currentUser, hidden }) => {
 
 // the function to allow access to state in root-reducer
 // state -> state in root-reducer -> defined in user.reducer.js / cart.reducer.js etc...
-// set props (currentUser) as value in root-reducer
-const mapStateToProps = state => ({
-  currentUser: state.user.currentUser,
-  hidden: state.cart.hidden
+// Use selectors and createStructuredSelector here
+const mapStateToProps = createStructuredSelector({
+  currentUser: selectCurrentUser,
+  hidden: selectCartHidden
 });
 
 // compose() -> Multiple HOC
