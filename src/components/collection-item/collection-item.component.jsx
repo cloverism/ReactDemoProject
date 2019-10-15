@@ -13,7 +13,9 @@ const CollectionItem = ({ item, addItem }) => {
         <p className="name">{name}</p>
         <p className="price">¥ {price}</p>
       </div>
-      <CustomButton inverted>カゴに入れる</CustomButton>
+      <CustomButton inverted onClick={() => addItem(item)}>
+        カゴに入れる
+      </CustomButton>
     </div>
   );
 };
