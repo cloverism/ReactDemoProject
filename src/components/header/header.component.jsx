@@ -25,7 +25,7 @@ const Header = ({ location, currentUser, hidden }) => {
             }`}
             to="/shop"
           >
-            SHOP
+            商品一覧
           </Link>
           <Link
             className={`option ${
@@ -33,11 +33,11 @@ const Header = ({ location, currentUser, hidden }) => {
             }`}
             to="/contact"
           >
-            CONTACT
+            お問い合わせ
           </Link>
           {currentUser ? (
             <Link className="option" onClick={() => auth.signOut()} to="/">
-              SIGN OUT
+              ログアウト
             </Link>
           ) : (
             <Link
@@ -46,7 +46,7 @@ const Header = ({ location, currentUser, hidden }) => {
               }`}
               to="/signin"
             >
-              SIGN IN
+              ログイン
             </Link>
           )}
           <CartIcon className="cart-icon" />

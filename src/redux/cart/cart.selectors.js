@@ -26,3 +26,13 @@ export const selectCartItemsCount = createSelector(
     return itemCount;
   }
 );
+
+export const selectCartTotalPrice = createSelector(
+  [selectCartItems],
+  cartItems => {
+    // Get the total price of cartItems
+    let totalPrice = 0;
+    for (const item of cartItems) totalPrice += item.price * item.quantity;
+    return totalPrice;
+  }
+);
