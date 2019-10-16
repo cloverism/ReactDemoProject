@@ -5,8 +5,21 @@
 
   .title {
     font-size: 22px;
-    margin-bottom: 15px;
+    margin-bottom: 25px;
     text-align: center;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      content: '';
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      width: 80px;
+      height: 1px;
+      bottom: -8px;
+      border-bottom: 5px solid #57a99a;
+    }
   }
 
   .preview {

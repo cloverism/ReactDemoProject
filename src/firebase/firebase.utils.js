@@ -38,7 +38,7 @@ export const createUserProfileDocument = async (userAuth, additionalData) => {
       console.error('Error at creating user: ', error.message);
     }
   }
-  // return userRef object -> update currentUser state in app.js
+  // If user already exists, just return userRef object -> update currentUser state in app.js
   return userRef;
 };
 

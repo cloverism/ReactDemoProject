@@ -25,7 +25,7 @@ class App extends React.Component {
 
     // Subscription
     // Listen to the auth -> When signIn/signOut, change the state
-    // user -> information about logged in user
+    // userAuth -> information about the logged in user
     // auth.onAuthStateChanged() -> Get back a function to unsubscribe from the listener
     this.unsubscribeFromAuth = auth.onAuthStateChanged(async userAuth => {
       if (userAuth) {
@@ -62,7 +62,7 @@ class App extends React.Component {
             {/* exact -> path must be exactly '/' */}
             <Route exact path="/" component={LandingPage} />
             <Route path="/home" component={HomePage} />
-            <Route exact path="/shop" component={ShopPage} />
+            <Route path="/shop" component={ShopPage} />
             <Route exact path="/checkout" component={CheckoutPage} />
             <Route
               exact
