@@ -1,7 +1,6 @@
-.collection-preview {
+.collection-page {
   display: flex;
   flex-direction: column;
-  margin: 0 0 40px 0;
 
   .title {
     font-size: 22px;
@@ -22,21 +21,23 @@
     }
   }
 
-  .preview {
+  .items {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+
+    & .collection-item {
+      margin-bottom: 30px;
+    }
   }
 }
 
 @media screen and (max-width: 575px) {
-  .collection-preview {
-    margin-bottom: 20px;
+  .collection-page .items {
+    display: block;
 
-    &:last-child {
-      margin: 0;
-    }
-    .preview {
-      display: block;
+    & .collection-item {
+      margin-bottom: 20px;
     }
   }
 }

@@ -1,5 +1,5 @@
-const SHOP_DATA = [
-  {
+const SHOP_DATA = {
+  earphones: {
     id: 1,
     title: 'イヤホン',
     routeName: 'earphones',
@@ -42,7 +42,7 @@ const SHOP_DATA = [
       }
     ]
   },
-  {
+  tablets: {
     id: 2,
     title: 'タブレット',
     routeName: 'tablets',
@@ -73,7 +73,7 @@ const SHOP_DATA = [
       }
     ]
   },
-  {
+  speakers: {
     id: 3,
     title: 'Bluetoothスピーカー',
     routeName: 'speakers',
@@ -110,7 +110,7 @@ const SHOP_DATA = [
       }
     ]
   },
-  {
+  smartphones: {
     id: 4,
     title: 'スマートフォン',
     routeName: 'smartphones',
@@ -163,7 +163,7 @@ const SHOP_DATA = [
       }
     ]
   },
-  {
+  laptops: {
     id: 5,
     title: 'ノートパソコン',
     routeName: 'laptops',
@@ -194,6 +194,6 @@ const SHOP_DATA = [
       }
     ]
   }
-];
+};
 
 export default SHOP_DATA;

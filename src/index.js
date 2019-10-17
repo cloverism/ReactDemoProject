@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
+import ScrollToTop from 'react-router-scroll-top';
 import { Provider } from 'react-redux';
 import { PersistGate } from 'redux-persist/integration/react';
 import './index.css';
@@ -13,10 +14,12 @@ ReactDOM.render(
   <Provider store={store}>
     {/* USE REACT ROUTER DOM */}
     <BrowserRouter>
-      {/* USE react-persist */}
-      <PersistGate persistor={persistor}>
-        <App />
-      </PersistGate>
+      <ScrollToTop>
+        {/* USE react-persist */}
+        <PersistGate persistor={persistor}>
+          <App />
+        </PersistGate>
+      </ScrollToTop>
     </BrowserRouter>
   </Provider>,
   document.getElementById('root')

@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 import CheckoutItem from '../../components/checkout-item/checkout-item.component';
-
+import StripeButton from '../../components/stripe-button/stripe-button.component';
 import {
   selectCartItems,
   selectCartTotalPrice
@@ -36,6 +36,12 @@ const CheckoutPage = ({ cartItems, totalPrice }) => {
             合計: ¥{totalPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',')}
           </span>
         </div>
+        <div className="test-warning">
+          テストカードを使ってください
+          <br />
+          4242 4242 4242 4242 - 01/20 - 123
+        </div>
+        <StripeButton price={totalPrice} />
       </div>
     );
   } else {
