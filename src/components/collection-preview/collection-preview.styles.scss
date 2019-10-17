@@ -26,6 +26,26 @@
     display: flex;
     justify-content: space-between;
   }
+
+  .footer {
+    margin-top: 10px;
+    font-weight: 700;
+    cursor: pointer;
+    text-align: right;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      content: '';
+      margin-left: auto;
+      left: 0;
+      right: 0;
+      width: 55px;
+      height: 1px;
+      bottom: -4px;
+      border-bottom: 3px solid #57a99a;
+    }
+  }
 }
 
 @media screen and (max-width: 575px) {
@@ -37,6 +57,9 @@
     }
     .preview {
       display: block;
+    }
+    .footer {
+      margin-top: 0;
     }
   }
 }

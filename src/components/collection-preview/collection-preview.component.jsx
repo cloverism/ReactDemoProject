@@ -1,8 +1,9 @@
 import React from 'react';
 import CollectionItem from '../collection-item/collection-item.component';
+import { withRouter } from 'react-router-dom';
 import './collection-preview.styles.scss';
 
-const CollectionPreview = ({ title, items }) => {
+const CollectionPreview = ({ title, items, routeName, history }) => {
   return (
     <div className="collection-preview">
       <h1 className="title">{title}</h1>
@@ -13,8 +14,16 @@ const CollectionPreview = ({ title, items }) => {
             <CollectionItem key={item.id} item={item} />
           ))}
       </div>
+      <div
+        className="footer"
+        onClick={() => {
+          history.push(`/shop/${routeName}`);
+        }}
+      >
+        More...
+      </div>
     </div>
   );
 };
 
-export default CollectionPreview;
+export default withRouter(CollectionPreview);

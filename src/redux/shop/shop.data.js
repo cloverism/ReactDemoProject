@@ -101,12 +101,6 @@ const SHOP_DATA = {
         name: 'SONY SRS-XB22',
         imageUrl: 'https://i.ibb.co/gTY8vgf/7-000000236131.jpg',
         price: 14168
-      },
-      {
-        id: 15,
-        name: 'DALI KATCH',
-        imageUrl: 'https://i.ibb.co/2PxxDS1/9-000000230429.jpg',
-        price: 49500
       }
     ]
   },
